@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Spider-Man 3</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; height: 100%; background: #0b1622; color: #9fb4c8; font: 13px/1.4 system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; overflow: hidden; touch-action: none; }
+  #wrap { position: relative; }
+  #screen { display: block; background: #000; image-rendering: pixelated; image-rendering: crisp-edges; box-shadow: 0 0 0 2px #1d3a55, 0 12px 40px #0008; }
+  #credit { opacity: .8; letter-spacing: .02em; }
+  #hint { opacity: .55; font-size: 12px; text-align: center; max-width: 92vw; }
+  #pad { display: none; width: 100%; max-width: 480px; justify-content: center; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 0 8px; box-sizing: border-box; }
+  .grp { flex-wrap: nowrap; }
+  body.touch #pad { display: flex; }
+  body.touch #hint { display: none; }
+  .grp { display: flex; gap: 6px; }
+  .btn { user-select: none; -webkit-user-select: none; touch-action: none; min-width: 40px; height: 48px; border-radius: 12px; border: 1px solid #2c4f72; background: #12273a; color: #cfe2f5; font-size: 22px; display: flex; align-items: center; justify-content: center; }
+  .btn.on { background: #1f4a73; }
+  .btn.soft { font-size: 12px; min-width: 46px; }
+</style>
+</head>
+<body>
+  <div id="wrap"><canvas id="screen" width="240" height="320"></canvas></div>
+  <div id="pad">
+    <div class="grp"><div class="btn" data-k="-3">◀</div><div class="btn" data-k="-1">▲</div><div class="btn" data-k="-2">▼</div><div class="btn" data-k="-4">▶</div></div>
+    <div class="grp"><div class="btn" data-k="-5">●</div><div class="btn soft" data-k="-6">Menu</div><div class="btn soft" data-k="-7">Back</div></div>
+  </div>
+  <div id="hint">arrows — move / jump / crouch · Space or Enter — fire / select · Q — left softkey · Esc — right softkey (pause / back) · M — sound</div>
+  <div id="credit">[port by ev1lbr1tan]</div>
+  <script src="js/rt.js"></script>
+  <script src="js/png.js"></script>
+  <script src="js/midp.js"></script>
+  <script src="js/midi.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/boot.js"></script>
+</body>
+</html>
